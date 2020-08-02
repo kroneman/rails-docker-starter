@@ -9,18 +9,17 @@ source documentation: https://docs.docker.com/compose/rails/
 #### 2. Clone this repository and change directory to root
 
 ```sh
-git clone <path-to-repo> && cd <path-to-repo>
+git clone https://github.com/kroneman/rails-docker-starter.git && cd rails-docker-starter
 ```
 
 #### 3. Build the project
-
 
 Generate files
 ```sh
 docker-compose run web rails new . --force --no-deps --database=postgresql
 ```
 
-Change ownership to non-root user
+Change ownership to non-root user (optional)
 ```sh
 sudo chown -R $USER:$USER .
 ```
@@ -59,4 +58,10 @@ test:
 
 ```sh
 docker-compose up
+```
+
+#### 6. Build databases
+
+```sh
+docker-compose run web rails db:create
 ```
