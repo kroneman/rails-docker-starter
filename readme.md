@@ -1,6 +1,8 @@
 # Startup files for Using docker compose with rails
 
-source documentation: https://docs.docker.com/compose/rails/
+- source documentation: https://docs.docker.com/compose/rails/
+- [vscode-debugging-documentation](./docker-ruby-breakpoints.md)
+
 
 #### 1. Install dependencies
 

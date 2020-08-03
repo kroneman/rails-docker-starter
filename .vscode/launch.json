@@ -1,0 +1,19 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Attach to Docker",
+            "type": "Ruby",
+            // the app debug server is already running...
+            // we will attach (connect) the debug client on it:
+            "request": "attach",
+            "remotePort": "9000",
+            "remoteHost": "0.0.0.0",
+            "remoteWorkspaceRoot": "/myapp",
+            "cwd": "${workspaceRoot}",
+        }
+    ]
+}

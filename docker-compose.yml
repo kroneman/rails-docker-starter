@@ -8,10 +8,12 @@ services:
       POSTGRES_PASSWORD: password
   web:
     build: .
-    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    command: bash -c "rm -f tmp/pids/server.pid && rdebug-ide --host '0.0.0.0' --port 9000 --dispatcher-port 26162 -- bin/rails s -p 3000 -b '0.0.0.0'"
+    # command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
       - .:/myapp
     ports:
       - "3000:3000"
+      - "9000:9000"
     depends_on:
       - db
